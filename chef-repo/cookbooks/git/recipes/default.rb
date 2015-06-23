@@ -6,3 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+apt_package "git" do
+	action :install
+end
