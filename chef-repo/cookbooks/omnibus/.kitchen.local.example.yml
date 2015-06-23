@@ -1,6 +1,0 @@
-driver:
-  name: vagrant
-  provider: vmware_fusion
-  customize:
-    cpus: 2
-    memory: 4096
