@@ -6,3 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+bash "ember-cli" do
+	code <<-EOH
+		npm install -g ember-cli
+	EOH
+end
