@@ -68,9 +68,10 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-  #config.vm.provision "shell", path: "scripts-repo/git.sh"
-  #config.vm.provision "shell", path: "scripts-repo/nodejs.sh"
-  #config.vm.provision "shell", path: "scripts-repo/java.sh"
-  #config.vm.provision "shell", path: "scripts-repo/groovy.sh"
+  config.vm.provision "shell", path: "scripts-repo/git.sh"
+  config.vm.provision "shell", path: "scripts-repo/nodejs.sh"
+  config.vm.provision "shell", path: "scripts-repo/java.sh"
+  config.vm.provision "shell", path: "scripts-repo/groovy.sh"
   config.vm.provision "shell", path: "scripts-repo/grails.sh"
+  config.vm.provision "shell", path: "scripts-repo/ember-cli.sh"
 end
