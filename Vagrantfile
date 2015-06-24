@@ -1,5 +1,5 @@
-# -*- mode: ruby -*-
 # vi: set ft=ruby :
+# -*- mode: ruby -*-
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -12,7 +12,8 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "swazza-dev"
+  config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/14.04/providers/virtualbox.box"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -72,5 +73,7 @@ Vagrant.configure(2) do |config|
     chef.chef_server_url = "https://api.opscode.com/organizations/swazza"
     chef.validation_client_name = "swazza-validator"
     chef.validation_key_path = "chef-repo/.chef/swazza-validator.pem"
+
+    chef.add_role "dev"
   end
 end
