@@ -1,4 +1,4 @@
 #!/bin/bash
-source script-repo/git.sh
-source script-repo/nodejs.sh
-source script-repo/java.sh
+source /vagrant/scripts-repo/git.sh
+source /vagrant/scripts-repo/nodejs.sh
+source /vagrant/scripts-repo/java.sh

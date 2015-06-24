@@ -1,5 +1,5 @@
-# vi: set ft=ruby :
 # -*- mode: ruby -*-
+# vi: set ft=ruby :
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -13,7 +13,6 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/trusty64"
-  #config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/14.04/providers/virtualbox.box"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -44,12 +43,12 @@ Vagrant.configure(2) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  config.vm.provider "virtualbox" do |vb|
-  # Display the VirtualBox GUI when booting the machine
+   config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
   #
-  # Customize the amount of memory on the VM:
-  vb.memory = "2048"
+  #   # Customize the amount of memory on the VM:
+      vb.memory = "2048"
   end
   #
   # View the documentation for the provider you are using for more
@@ -69,6 +68,9 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
-  config.vm.provision "shell", path: "provision.sh"
-  end
+  #config.vm.provision "shell", path: "scripts-repo/git.sh"
+  #config.vm.provision "shell", path: "scripts-repo/nodejs.sh"
+  #config.vm.provision "shell", path: "scripts-repo/java.sh"
+  #config.vm.provision "shell", path: "scripts-repo/groovy.sh"
+  config.vm.provision "shell", path: "scripts-repo/grails.sh"
 end
