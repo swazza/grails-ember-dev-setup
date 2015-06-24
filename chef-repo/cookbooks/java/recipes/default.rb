@@ -15,20 +15,12 @@
 # 6 - add logic to create JAVA_HOME variable in path in ~/.profile
 # 7 - restart the shell
 
-# bash "java" do
-# 	code <<-EOH
-		
-# 	EOH
-# end
-
-# Using apt_get package for now - this has to be removed
-apt_package "openjdk-7-jre-headless" do
-	action :install
-end
-
-bash "JAVA_HOME" do
+bash "java" do
 	code <<-EOH
-		echo "export JAVA_HOME=/usr/bin/java" >> /etc/profile
+		wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u67-b01/jdk-7u67-linux-x64.tar.gz
+		tar xfz jdk-7u67-linux-x64.tar.gz
+		mv jdk1.7.67 /usr/local/
+		echo "export JAVA_HOME=/usr/local/jdk1.7.67" >> /etc/profile
 		echo "export PATH=$PATH:$JAVA_HOME/bin" >> /etc/profile
 	EOH
 end
